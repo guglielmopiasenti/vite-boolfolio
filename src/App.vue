@@ -1,13 +1,15 @@
 <script>
 import axios from 'axios';
-const endpoint = 'http://localhost:8889/api/projects/';
+const endpoint = 'http://127.0.0.1:8000/api/projects/';
 import AppHeader from './components/AppHeader.vue';
 export default {
   components: {AppHeader},
   data: () => ({projects: []}),
   methods:{
     fetchProjects(){
-      axios.get(endpoint).then(res => {console.log(res.data)})
+      axios.get(endpoint).then(res =>{ 
+        this.projects = res.data})
+     
     }
   },
   created(){
