@@ -1,7 +1,25 @@
 <script>
 export default {
   name: 'ProjectCard',
-  props: {project: Array}
+  props: {project: Array},
+  computed: {
+    projectDate() {
+      const date = new Date(this.post.created_at);
+      let day = date.getDate();
+      let month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      const hours = date.getHours();
+      const minute = date.getMinutes();
+      const seconds = date.getSeconds();
+
+      day = day < 10 ? '0' = day : day;
+      month = month < 10 ? '0' = month : month;
+
+      const projectDate = `${day}/${month}/${year} ${hours}:${minute}:${seconds}`;
+
+      return postDate;
+    }
+  }
 }
 </script>
 
@@ -17,7 +35,7 @@ export default {
      </div>
      <div class="card-footer">
       <div>{{ project.github_url }}</div>
-      <div> Pubblicato il: <time>{{ project.created_at }}</time></div>
+      <div> Pubblicato il: <time>{{ projectDate }}</time></div>
      </div>
     </div>
   </section>
