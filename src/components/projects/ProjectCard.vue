@@ -4,7 +4,7 @@ export default {
   props: {project: Array},
   computed: {
     projectDate() {
-      const date = new Date(this.post.created_at);
+      const date = new Date(this.project.created_at);
       let day = date.getDate();
       let month = date.getMonth() + 1;
       const year = date.getFullYear();
