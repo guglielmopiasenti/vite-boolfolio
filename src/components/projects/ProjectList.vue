@@ -13,7 +13,7 @@ export default {
 
     <div class="jumbotron p-5 mb-4 bg-light rounded-3">
       <div class="container py-5">
-        <h1 class="display-5 fw-bold text-center">
+        <h1 class="fw-bold text-center">
           Hello, these are some of my projects
         </h1>
       </div>
@@ -27,7 +27,7 @@ export default {
 
 <style>
 h1 {
-  font-size: 72px;
+  font-size: 60px;
   background: -webkit-linear-gradient(#eee, #327305);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
