@@ -1,6 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
-import HomePage from './components/pages/HomePage.vue';
+import HomePage from './pages/HomePage.vue';
 export default {
   components: { AppHeader, HomePage },
 };

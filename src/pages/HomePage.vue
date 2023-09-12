@@ -1,10 +1,11 @@
 <script>
 import axios from 'axios';
-import ProjectList from '../projects/ProjectList.vue';
+import ProjectList from '../components/projects/ProjectList.vue';
+
 const endpoint = 'http://127.0.0.1:8000/api/projects/';
 export default {
   name: 'HomePage',
-  components: { ProjectList},
+  components: { ProjectList },
   data: () => ({ projects: [] }),
   methods: {
     fetchProjects() {
