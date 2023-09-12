@@ -37,7 +37,7 @@ export default {
       </div>
       <div class="card-footer">
         <div>{{ project.github_url }}</div>
-        <div> Pubblicato il: <time>{{ projectDate }}</time></div>
+        <div> Published at: <time>{{ projectDate }}</time></div>
       </div>
     </div>
   </section>
