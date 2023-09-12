@@ -28,17 +28,48 @@ export default {
 
 <template>
   <section id="project-card">
-    <div class="card my-5">
+    <div class="card text-white bg-dark my-5">
       <div class="card-header">
-        <h2>{{ project.name }}</h2>
+        <h2 class="card-title">{{ project.name }}</h2>
       </div>
       <div class="card-body">
-        <p>{{ project.description }}</p>
+        <h5 class="card-subtitle mb-2">Project Description</h5>
+        <p class="card-text">{{ project.description }}</p>
       </div>
       <div class="card-footer">
-        <div>{{ project.github_url }}</div>
-        <div> Published at: <time>{{ projectDate }}</time></div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="project-info">
+              <div><a :href="project.github_url" target="_blank" class="text-info">GitHub Repository</a></div>
+              <div class="text-muted"> Published at: <time>{{ projectDate }}</time></div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex justify-content-end align-items-center">
+            <RouterLink class="btn btn-info" :to="{name: 'project', params: {id: project.id}}">See Details</RouterLink>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 </template>
+
+<style>
+#project-card .card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-subtitle {
+  font-size: 1.2rem;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+</style>
