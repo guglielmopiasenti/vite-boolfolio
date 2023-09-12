@@ -19,7 +19,8 @@ export default {
       const projectDate = `${day}/${month}/${year} ${hours}:${minute}:${seconds}`;
 
       return projectDate;
-    }
+    },
+    
   }
 }
 </script>
