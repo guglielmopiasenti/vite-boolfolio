@@ -1,7 +1,7 @@
 <script>
 import axios from 'axios';
 const endpoint = 'http://localhost:8000/api/contact-message';
-const emptyForm = {email: '', subject: '', message: '',}
+const emptyForm = {email: '', subject: '', content: '',}
 export default {
   name: 'ContactPage',
   data: () => ({ form: { emptyForm}}),
@@ -39,7 +39,7 @@ export default {
       <!-- Message -->
       <div class="mb-3">
         <label for="message" class="form-label">Message <sup class="text-danger">*</sup></label>
-        <textarea class="form-control" id="message" rows="5" v-model.trim="form.message" required></textarea>
+        <textarea class="form-control" id="message" rows="5" v-model.trim="form.content" required></textarea>
       </div>
 
       <!-- Submit button -->
